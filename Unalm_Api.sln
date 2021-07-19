@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unalm_Api", "Unalm_Api\Unalm_Api.csproj", "{2BEEE63C-0797-489B-B956-BDBFF81455A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BEEE63C-0797-489B-B956-BDBFF81455A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BEEE63C-0797-489B-B956-BDBFF81455A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BEEE63C-0797-489B-B956-BDBFF81455A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BEEE63C-0797-489B-B956-BDBFF81455A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4AC250C6-8F6D-4C7D-9E00-EC2EC89512CF}
+	EndGlobalSection
+EndGlobal
