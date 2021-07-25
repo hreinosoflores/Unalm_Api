@@ -16,6 +16,9 @@ namespace Unalm_Api
 {
     public class Startup
     {
+
+        readonly string MisOrigenes = "misOrigenes";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -26,7 +29,19 @@ namespace Unalm_Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
+            //CORS
+            services.AddCors(
+                options =>
+                    options.AddPolicy(
+                        name: MisOrigenes,
+                        builder => builder.WithOrigins(
+                            "http://localhost:4200", //angular
+                            "http://localhost:3000"  //react
+                        ).AllowAnyHeader().AllowAnyMethod()
+                    )
+            );
+
+
             services.AddControllers();
 
             services.AddDbContext<unalmContext>(options =>
@@ -44,6 +59,8 @@ namespace Unalm_Api
             }
 
             app.UseRouting();
+
+            app.UseCors(MisOrigenes);
 
             app.UseAuthorization();
 
