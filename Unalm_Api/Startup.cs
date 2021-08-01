@@ -36,7 +36,8 @@ namespace Unalm_Api
                         name: MisOrigenes,
                         builder => builder.WithOrigins(
                             "http://localhost:4200", //angular
-                            "http://localhost:3000"  //react
+                            "http://localhost:3000",  //react
+                            "http://localhost:8080"  //vue
                         ).AllowAnyHeader().AllowAnyMethod()
                     )
             );
