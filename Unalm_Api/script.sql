@@ -1,8 +1,9 @@
 create database unalm;
+
 use unalm;
 
 CREATE TABLE `cursos` (
-  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `id` bigint AUTO_INCREMENT,
   `codigo` char(6) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nombre` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `creditos` int NOT NULL,
@@ -12,10 +13,10 @@ CREATE TABLE `cursos` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+);
 
 CREATE TABLE `bandeja_mensajes` (
-  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `id` bigint AUTO_INCREMENT,
   `nombres` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `apellidos` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -24,7 +25,7 @@ CREATE TABLE `bandeja_mensajes` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+);
 
 INSERT INTO `unalm`.`cursos`(`codigo`,`nombre`,`creditos`,`horas_teoria`,`horas_practica`,`created_at`,`updated_at`,`sumilla`)
 VALUES ('CC1023','Matemática Básica',3,2,4,now(),now(),'El curso de Matemática Básica está destinado a los alumnos que inician sus estudios superiores en las carreras de Ciencias e Ingeniería con el proposito de homogenizar y profundizar sus conocimientos de matemáticas los cuales serán utilizados en los cursos posteriores.');
